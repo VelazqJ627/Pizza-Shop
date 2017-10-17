@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PizzeriaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Topping">
+    <Key>
+      <PropertyRef Name="TopId" />
+    </Key>
+    <Property Name="TopId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TopName" Type="varchar" MaxLength="25" />
+    <Property Name="TopPrice" Type="money" />
+    <Property Name="TSelect" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="PizzeriaModelStoreContainer">
+    <EntitySet Name="Topping" EntityType="Self.Topping" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
