@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link href="~/Content/css/materialize.min.css" rel="stylesheet"
+          type="text/css" />
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="~/Content/js/materialize.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="navbar-fixed ">
+            <nav class="red">
+                <div class="nav-wrapper container">
+                    <a href="/Home" class="brand-logo center white-text">Big Boy's</a>
+                    <ul class="right hide-on-med-and-down white-text">
+                        <li><a href="#" class="white-text">@User.Identity.Name</a></li>
+                        <li><a href="/Home/InsertOrderForm" class="white-text">Order Pizza</a></li>
+                    </ul>
+                    @if (User.IsInRole("Admin"))
+                    {
+                    <a href="#" data-activates="slide-out" class="button-collapse show-on-large">Admin Tools</a>
+                    
+                    }
+                </div>
+            </nav>
+        </div>
+        <ul id="slide-out" class="side-nav">
+            <li>@Html.ActionLink("Role Manager", "Index", "Roles")</li>
+            <li><a href="/Home/GetOrders">See all Orders</a></li>
+        </ul>
+    </header>
+    
+   
+    <div class="container">
+        @RenderBody()
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Content/js/init.js"></script>
+    <script src="~/Content/js/materialize.js"></script>
+    <script src="~/Content/js/materialize.min.js"></script>
+</body>
+</html>
