@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PizzeriaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Topping">
+    <Key>
+      <PropertyRef Name="TopId" />
+    </Key>
+    <Property Name="TopId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TopName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TopPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TSelect" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="PizzeriaEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Toppings" EntityType="Self.Topping" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "InsertOrders";
+}
+
+<div class="center">
+<h5>Online Recipt</h5>
+<p>Please Print or Screenshot</p>
+    </div>
+<div class=" row valign-wrapper">
+    <div class="col s6 offset-s3 valign">
+        <div class="card-panel hoverable" style="width: 548px;">
+            <div class="card-image">
+                <img src="http://assets.nydailynews.com/polopoly_fs/1.1218791.1355352206!/img/httpImage/image.jpg_gen/derivatives/article_750/pizza13k-1-web.jpg" class="responsive-img" />
+            </div>
+            <div class="card-content">
+                @User.Identity.Name Ordered: 
+                <div class="center-align">
+            <h5>
+                Pizza Size:
+                @if (ViewBag.SizeId == 1)
+                { @(" Small")}
+                else if (ViewBag.SizeId == 2)
+                { @(" Medium") }
+                else
+                { @(" Large") }
+            </h5>
+
+            <h5>
+                Cheese Amount:
+                @if (ViewBag.ChId == 1)
+                { @("No Cheese")}
+                else if (ViewBag.ChId == 2)
+                { @("Regular ") }
+                else
+                { @("Extra") }
+
+            </h5>
+            <h5>
+                Sauce Amount:
+                @if (ViewBag.SaId == 1)
+                { @("No Sauce")}
+                else if (ViewBag.SaId == 2)
+                { @("Regular ") }
+                else
+                { @("Extra") }
+            </h5>
+            <h5>
+                Toppings:
+                @if (ViewBag.Pepperoni == true)
+                { @(" Pepperoni ")}
+                else { }
+
+                @if (ViewBag.Mushrooms == true)
+                { @(" Mushrooms ")}
+                else { }
+
+                @if (ViewBag.Onion == true)
+                { @(" Onion ")}
+                else { }
+
+                @if (ViewBag.Bacon == true)
+                { @(" Bacon ")}
+                else { }
+
+                @if (ViewBag.Peppers == true)
+                { @(" Peppers ")}
+                else { }
+
+                @if (ViewBag.Steak == true)
+                { @(" Steak ")}
+                else { }
+
+                @if (ViewBag.Ham == true)
+                { @(" Ham ")}
+                else { }
+
+                @if (ViewBag.Sausage == true)
+                { @(" Sausage ")}
+                else { }
+
+                @if (ViewBag.Chicken == true)
+                { @(" Chicken ")}
+                else { }
+
+                @if (ViewBag.Tomatoes == true)
+                { @(" Tomatoes ")}
+                else { }
+            </h5>
+                    </div>
+
+                <h4>Your Total is: $@ViewBag.OTotal</h4>
+                <h4>Please give us @ViewBag.Time minutes</h4>
+
+            </div>
+            <div class="card-action center-align">
+                <a href="/Home/InsertOrderForm" class="waves-effect waves-light btn black">Place another Order</a>
+            </div>
+         </div>
+
+
+        </div>
+    </div>
+

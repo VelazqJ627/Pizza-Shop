@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "GetOrders";
+}
+
+<h2 class="center-align">All Orders</h2>
+
+
+<table id="myTable" class="striped">
+    <tr class="header">
+        <th>OrderId</th>
+        <th>UserId</th>
+        <th>DelOpt</th>
+        <th>Size</th>
+        <th>Cheese</th>
+        <th>Sauce</th>
+        <th>Pepperoni</th>
+        <th>Mushrooms</th>
+        <th>Onion</th>
+        <th>Bacon</th>
+        <th>Peppers</th>
+        <th>Steak</th>
+        <th>Ham</th>
+        <th>Sausage</th>
+        <th>Chicken</th>
+        <th>Tomatoes</th>
+        <th>Total</th>
+    </tr>
+    @foreach (var anItem in ViewBag.ListOfOrders)
+    {
+        <tr>
+            <td>@anItem.OrderId</td>
+            <td>@anItem.Id</td>
+            <td>@anItem.DelOpt</td>
+            <td>@anItem.SizeId</td>
+            <td>@anItem.ChId</td>
+            <td>@anItem.SaId</td>
+            <td>@anItem.Pepperoni</td>
+            <td>@anItem.Mushrooms</td>
+            <td>@anItem.Onion</td>
+            <td>@anItem.Bacon</td>
+            <td>@anItem.Peppers</td>
+            <td>@anItem.Steak</td>
+            <td>@anItem.Ham</td>
+            <td>@anItem.Sausage</td>
+            <td>@anItem.Chicken</td>
+            <td>@anItem.Tomatoes</td>
+            <td>@anItem.OTotal</td>
+        </tr>
+    }
+</table>
+
+
+

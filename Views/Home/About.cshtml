@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<table border="1">
+    <tr>
+        <th>Order Id</th>
+        <th>Pizza Id</th>
+        <th>DelOpt</th>
+        <th>Total</th>
+
+
+    </tr>
+
+    @foreach (var anItem in ViewBag.ListOfOrders)
+    {
+        <tr>
+            <td>@anItem.OrderId</td>
+            <td>@anItem.PizzaId</td>
+            <td>@anItem.DelOpt</td>
+            <td>@anItem.Total</td>
+        </tr>
+    }
+
+</table>
+<a class="btn btn-default" href="Index" style="margin-bottom: 10px;">Return</a><br />

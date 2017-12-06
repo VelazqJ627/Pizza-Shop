@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PizzeriaModelStoreContainer" CdmEntityContainer="PizzeriaEntities1">
+    <EntitySetMapping Name="Toppings">
+      <EntityTypeMapping TypeName="PizzeriaModel.Topping">
+        <MappingFragment StoreEntitySet="Topping">
+          <ScalarProperty Name="TopId" ColumnName="TopId" />
+          <ScalarProperty Name="TopName" ColumnName="TopName" />
+          <ScalarProperty Name="TopPrice" ColumnName="TopPrice" />
+          <ScalarProperty Name="TSelect" ColumnName="TSelect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
